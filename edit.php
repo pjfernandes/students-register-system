@@ -27,7 +27,7 @@
 
   if ($result->execute()) {
     echo "New record edit successfully";
-    header('Location: index.php');
+    header("Location: show.php?id=${_GET['id']}");
   } else {
   echo "Unable to edit record";
   }
