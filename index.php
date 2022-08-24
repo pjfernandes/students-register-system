@@ -16,7 +16,15 @@
           // $linhas_afetadas = $db -> prepare("SELECT * FROM students WHERE nome = :nome");
           // $linhas_afetadas->bindParam(':nome', $student);
           ?>
-          <a href="show.php?id=<?=$student['id']?>" id="<?php echo $student['id']; ?>"><li><?php echo $student['nome']; ?> - <?php echo $student['email'];?></li></a>
+
+            <li>
+              <a href="show.php?id=<?=$student['id']?>" id="<?php echo $student['id']; ?>">
+                <?php echo $student['nome']; ?> - <?php echo $student['email'];?> -
+              </a>
+
+              <a href="edit.php?id=<?=$student['id']?>" id="<?php echo $student['id']; ?>">Edit</a>
+            </li>
+
 
         <?php } ?>
     </ul>
