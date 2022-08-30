@@ -20,7 +20,6 @@
 
 <?php
   $result = $db -> prepare("UPDATE alunos SET email=:email, nome=:name WHERE id=:id");
-  //$db->exec("UPDATE `usuarios` SET `email` = 'jose@dasilva.com', `nome` = 'José' WHERE `id` = 1");
   $result->bindParam(':email', $_POST['email']);
   $result->bindParam(':name', $_POST['name']);
   $result->bindParam(':id', $_GET['id']);
